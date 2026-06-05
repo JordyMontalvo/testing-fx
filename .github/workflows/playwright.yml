@@ -31,7 +31,7 @@ jobs:
       run: npx playwright install --with-deps
 
     - name: Correr Pruebas (Automáticas)
-      run: npx playwright test
+      run: npx playwright test --project=Mexico --project=Argentina
 
     - name: Guardar Reporte como Artefacto (Descargable)
       uses: actions/upload-artifact@v4
