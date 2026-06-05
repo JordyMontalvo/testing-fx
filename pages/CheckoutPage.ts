@@ -1,4 +1,4 @@
-import { Page, Locator } from '@playwright/test';
+import { Page, Locator, expect } from '@playwright/test';
 
 export class CheckoutPage {
   readonly page: Page;
@@ -38,7 +38,7 @@ export class CheckoutPage {
     this.cityInput = page.getByPlaceholder('Ciudad').first();
     this.streetInput = page.getByPlaceholder('Calle y número').first();
 
-    this.continueRegistrationButton = page.locator('button#registrarse').first();
+    this.continueRegistrationButton = page.locator('button#registrarse:visible').first();
   }
 
   async enterUnregisteredEmail(email: string) {
@@ -55,8 +55,9 @@ export class CheckoutPage {
     await this.emailInput.press('Tab'); // Trigger check
 
     // Wait for the first modal to appear
-    const sendCodeButton = this.page.locator('button:has-text("Enviar código de verificación")');
+    const sendCodeButton = this.page.locator('button:has-text("Enviar código de verificación"):visible').first();
     await sendCodeButton.waitFor({ state: 'visible' });
+    await expect(sendCodeButton).toBeEnabled({ timeout: 10000 });
 
     // Interceptamos el request que envía el código al correo
     const requestPromise = this.page.waitForRequest(req => {
@@ -220,7 +221,8 @@ export class CheckoutPage {
     
     // Esperamos a que el botón esté habilitado y visible, no usamos force para asegurarnos de que el navegador lo acepte
     await this.continueRegistrationButton.scrollIntoViewIfNeeded();
-    await this.continueRegistrationButton.waitFor({ state: 'visible', timeout: 10000 }).catch(() => {});
+    await this.continueRegistrationButton.waitFor({ state: 'visible', timeout: 10000 });
+    await expect(this.continueRegistrationButton).toBeEnabled({ timeout: 20000 });
     await this.continueRegistrationButton.click();
 
     // Revisamos si Fuxion nos bloqueó con algún error de validación
@@ -243,4 +245,3 @@ export class CheckoutPage {
     await this.page.waitForTimeout(5000);
   }
 }
-
