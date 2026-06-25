@@ -1,0 +1,538 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: checkout.spec.ts >> Checkout Flow >> Should handle checkout for unregistered user
+- Location: tests/checkout.spec.ts:37:7
+
+# Error details
+
+```
+Test timeout of 90000ms exceeded.
+```
+
+```
+Error: locator.waitFor: Test timeout of 90000ms exceeded.
+Call log:
+  - waiting for locator('button[name="add-to-cart"]').first() to be visible
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e3] [cursor=pointer]:
+      - generic [ref=e4]: "0"
+      - img [ref=e6]
+    - generic [ref=e8]:
+      - generic [ref=e9]: Carrito de compras
+      - generic [ref=e10] [cursor=pointer]: 
+    - generic [ref=e13]: Tu carrito está vacío
+    - text: 
+  - link "Ir al contenido" [ref=e16] [cursor=pointer]:
+    - /url: "#content"
+  - generic [ref=e17]:
+    - generic [ref=e18]:
+      - generic [ref=e20]:
+        - link [ref=e25] [cursor=pointer]:
+          - /url: https://testargentinaa.sites.fuxion.com
+        - navigation [ref=e30]:
+          - text: 
+          - list [ref=e32]:
+            - listitem [ref=e33]:
+              - link "Inicio" [ref=e34] [cursor=pointer]:
+                - /url: https://testargentinaa.sites.fuxion.com/
+            - listitem [ref=e35]:
+              - link "Tienda" [ref=e36] [cursor=pointer]:
+                - /url: "#"
+                - text: Tienda
+                - generic [ref=e37]: 
+            - listitem [ref=e38]:
+              - link "Nosotros" [ref=e39] [cursor=pointer]:
+                - /url: https://testargentinaa.sites.fuxion.com/nosotros/
+            - listitem [ref=e40]:
+              - link "Contacto" [ref=e41] [cursor=pointer]:
+                - /url: https://testargentinaa.sites.fuxion.com/contact/
+        - generic [ref=e43]:
+          - link [ref=e48] [cursor=pointer]:
+            - /url: https://ifuxion.com/orphan/enrollment/products
+            - img [ref=e49]
+          - generic [ref=e57] [cursor=pointer]:
+            - img [ref=e59]
+            - generic [ref=e60]: "0"
+      - text:  
+    - generic [ref=e63]:
+      - generic [ref=e66]:
+        - list [ref=e73]:
+          - listitem [ref=e74]:
+            - link "FLORA LIV" [ref=e77] [cursor=pointer]:
+              - /url: https://testargentinaa.sites.fuxion.com/producto/flora-liv/
+              - img "FLORA LIV" [ref=e78]
+        - generic [ref=e80]:
+          - heading "Recuperá el Equilibrio de Tu Flora Intestinal con Flora Liv" [level=1] [ref=e84]
+          - generic [ref=e85]:
+            - generic [ref=e86]:
+              - list [ref=e92]:
+                - listitem [ref=e93]:
+                  - generic [ref=e94]:
+                    - generic:
+                      - link:
+                        - /url: https://testargentinaa.sites.fuxion.com/producto/flora-liv/
+                    - generic [ref=e95]:
+                      - link "FLORA LIV" [ref=e96] [cursor=pointer]:
+                        - /url: https://testargentinaa.sites.fuxion.com/producto/flora-liv/
+                        - heading "FLORA LIV" [level=2] [ref=e97]
+                      - generic [ref=e100]: $ 54.100,00
+              - generic [ref=e101]:
+                - img "Valorado con 5 de 5" [ref=e105]:
+                  - generic [ref=e106]:
+                    - generic [ref=e108]: 
+                    - generic [ref=e110]: 
+                  - generic [ref=e111]:
+                    - generic [ref=e113]: 
+                    - generic [ref=e115]: 
+                  - generic [ref=e116]:
+                    - generic [ref=e118]: 
+                    - generic [ref=e120]: 
+                  - generic [ref=e121]:
+                    - generic [ref=e123]: 
+                    - generic [ref=e125]: 
+                  - generic [ref=e126]:
+                    - generic [ref=e128]: 
+                    - generic [ref=e130]: 
+                - heading "Bolsa de 28 unidades" [level=2] [ref=e133]
+            - generic [ref=e135]:
+              - generic [ref=e138]:
+                - img [ref=e141]
+                - heading "Envíos en 72 Horas (Lun-Vier)" [level=3] [ref=e144]
+              - generic [ref=e147]:
+                - img [ref=e150]
+                - heading "Comprás 4 y la 5ta va gratis" [level=3] [ref=e153]
+              - generic [ref=e156]:
+                - img [ref=e159]
+                - heading "Garantía de 30 días" [level=3] [ref=e162]
+          - link "Agregar al carrito" [ref=e168] [cursor=pointer]:
+            - /url: /producto/flora-liv/?add-to-cart=19346
+            - generic [ref=e170]: Agregar al carrito
+          - generic "Accordion. Open links with Enter or Space, close with Escape, and navigate with Arrow Keys" [ref=e173]:
+            - group [ref=e174]:
+              - generic "Descripción del producto" [ref=e175] [cursor=pointer]:
+                - generic [ref=e177]: Descripción del producto
+                - img [ref=e180]
+            - group [ref=e182]:
+              - generic "Cómo se toma y sabor" [ref=e183] [cursor=pointer]:
+                - generic [ref=e185]: Cómo se toma y sabor
+                - img [ref=e188]
+            - group [ref=e190]:
+              - generic "Beneficios" [ref=e191] [cursor=pointer]:
+                - generic [ref=e193]: Beneficios
+                - img [ref=e196]
+            - group [ref=e198]:
+              - generic "Ingredientes" [ref=e199] [cursor=pointer]:
+                - generic [ref=e201]: Ingredientes
+                - img [ref=e204]
+      - region "Slides" [ref=e212]:
+        - generic [ref=e213]:
+          - group "5 / 5" [ref=e214]:
+            - generic [ref=e215]:
+              - generic [ref=e216]:
+                - generic [ref=e217]:
+                  - generic [ref=e218]: Me siento joya.
+                  - generic [ref=e219]:
+                    - generic [ref=e220]: ★ ★
+                    - generic [ref=e221]: ★ ★
+                    - generic [ref=e222]: ★ ★
+                    - generic [ref=e223]: ★ ★
+                    - generic [ref=e224]: ★ ★
+                  - generic [ref=e225]: Matías R.
+                - generic "Read More"
+              - generic [ref=e227]: Antes de tomarlo vivía con molestias, no graves, pero constantes. Siento que el cuerpo se ordenó. No tengo que estar pensando todo el tiempo en lo que comí o en cómo me va a caer.
+          - group "1 / 5" [ref=e228]:
+            - generic [ref=e229]:
+              - generic [ref=e230]:
+                - generic [ref=e231]:
+                  - generic [ref=e232]: Me gustó y lo recomiendo!
+                  - generic [ref=e233]:
+                    - generic [ref=e234]: ★ ★
+                    - generic [ref=e235]: ★ ★
+                    - generic [ref=e236]: ★ ★
+                    - generic [ref=e237]: ★ ★
+                    - generic [ref=e238]: ★ ★
+                  - generic [ref=e239]: Nicole G.
+                - generic "Read More"
+              - generic [ref=e241]: Yo lo empecé a tomar porque siempre tenía la panza medio rara. No sentí nada fuerte ni raro. A los días me di cuenta de que ya no estaba tan pendiente de eso. Lo tomaba y seguía con mi día normal. ¡Lo recomiendo!
+          - group "2 / 5" [ref=e242]:
+            - generic [ref=e243]:
+              - generic [ref=e244]:
+                - generic [ref=e245]:
+                  - generic [ref=e246]: Lo tomo en ayunas.
+                  - generic [ref=e247]:
+                    - generic [ref=e248]: ★ ★
+                    - generic [ref=e249]: ★ ★
+                    - generic [ref=e250]: ★ ★
+                    - generic [ref=e251]: ★ ★
+                    - generic [ref=e252]: ★ ★
+                  - generic [ref=e253]: Juan Carlos RS.
+                - generic "Read More"
+              - generic [ref=e255]: No soy muy constante con nada, pero este lo sumé fácil. No me cayó pesado ni me generó nada extraño. Simplemente sentí que el cuerpo estaba más tranquilo y empecé a ir al baño todos los días.
+          - group "3 / 5" [ref=e256]:
+            - generic [ref=e257]:
+              - generic [ref=e258]:
+                - generic [ref=e259]:
+                  - generic [ref=e260]: Me cambió el humor.
+                  - generic [ref=e261]:
+                    - generic [ref=e262]: ★ ★
+                    - generic [ref=e263]: ★ ★
+                    - generic [ref=e264]: ★ ★
+                    - generic [ref=e265]: ★ ★
+                    - generic [ref=e266]: ★ ★
+                  - generic [ref=e267]: José S.
+                - generic "Read More"
+              - generic [ref=e269]: Yo no esperaba sentir nada puntual. Lo tomé como parte de la rutina y listo. A los días me di cuenta de que no estaba hinchado como antes y me noto de mejor humor.
+          - group "4 / 5" [ref=e270]:
+            - generic [ref=e271]:
+              - generic [ref=e272]:
+                - generic [ref=e273]:
+                  - generic [ref=e274]: Se re siente el cambio!
+                  - generic [ref=e275]:
+                    - generic [ref=e276]: ★ ★
+                    - generic [ref=e277]: ★ ★
+                    - generic [ref=e278]: ★ ★
+                    - generic [ref=e279]: ★ ★
+                    - generic [ref=e280]: ★ ★
+                  - generic [ref=e281]: Camila C.
+                - generic "Read More"
+              - generic [ref=e283]: Yo siempre estaba inflamada, como que comía cualquier cosa y ya me sentía mal. Con el Flora Liv eso bajó bastante. No es que hice una dieta ni nada, pero lo re senti!
+          - group "5 / 5" [ref=e284]:
+            - generic [ref=e285]:
+              - generic [ref=e286]:
+                - generic [ref=e287]:
+                  - generic [ref=e288]: Me siento joya.
+                  - generic [ref=e289]:
+                    - generic [ref=e290]: ★ ★
+                    - generic [ref=e291]: ★ ★
+                    - generic [ref=e292]: ★ ★
+                    - generic [ref=e293]: ★ ★
+                    - generic [ref=e294]: ★ ★
+                  - generic [ref=e295]: Matías R.
+                - generic "Read More"
+              - generic [ref=e297]: Antes de tomarlo vivía con molestias, no graves, pero constantes. Siento que el cuerpo se ordenó. No tengo que estar pensando todo el tiempo en lo que comí o en cómo me va a caer.
+          - group "1 / 5" [ref=e298]:
+            - generic [ref=e299]:
+              - generic [ref=e300]:
+                - generic [ref=e301]:
+                  - generic [ref=e302]: Me gustó y lo recomiendo!
+                  - generic [ref=e303]:
+                    - generic [ref=e304]: ★ ★
+                    - generic [ref=e305]: ★ ★
+                    - generic [ref=e306]: ★ ★
+                    - generic [ref=e307]: ★ ★
+                    - generic [ref=e308]: ★ ★
+                  - generic [ref=e309]: Nicole G.
+                - generic "Read More"
+              - generic [ref=e311]: Yo lo empecé a tomar porque siempre tenía la panza medio rara. No sentí nada fuerte ni raro. A los días me di cuenta de que ya no estaba tan pendiente de eso. Lo tomaba y seguía con mi día normal. ¡Lo recomiendo!
+        - generic [ref=e312]:
+          - button "Go to slide 1" [ref=e313] [cursor=pointer]
+          - button "Go to slide 2" [ref=e314] [cursor=pointer]
+          - button "Go to slide 3" [ref=e315] [cursor=pointer]
+          - button "Go to slide 4" [ref=e316] [cursor=pointer]
+          - button "Go to slide 5" [ref=e317] [cursor=pointer]
+      - generic [ref=e325]:
+        - heading "Combiná el Flora Liv con estas bebidas" [level=1] [ref=e329]
+        - list [ref=e335]:
+          - listitem [ref=e336]:
+            - link "LIQUID FIBER" [ref=e338] [cursor=pointer]:
+              - /url: https://testargentinaa.sites.fuxion.com/producto/liquid-fiber/
+              - img "LIQUID FIBER" [ref=e339]
+            - generic [ref=e340]:
+              - link "LIQUID FIBER" [ref=e341] [cursor=pointer]:
+                - /url: https://testargentinaa.sites.fuxion.com/producto/liquid-fiber/
+                - heading "LIQUID FIBER" [level=2] [ref=e342]
+              - generic [ref=e343]: Desintoxicación
+              - generic [ref=e346]: $ 45.550,00
+              - generic [ref=e347]: 20 puntos
+              - 'button "Añadir al carrito: “LIQUID FIBER”" [ref=e349] [cursor=pointer]': Añadir al carrito
+          - listitem [ref=e351]:
+            - link "ALPHA BALANCE" [ref=e353] [cursor=pointer]:
+              - /url: https://testargentinaa.sites.fuxion.com/producto/alpha-balance/
+              - img "ALPHA BALANCE" [ref=e354]
+            - generic [ref=e355]:
+              - link "ALPHA BALANCE" [ref=e356] [cursor=pointer]:
+                - /url: https://testargentinaa.sites.fuxion.com/producto/alpha-balance/
+                - heading "ALPHA BALANCE" [level=2] [ref=e357]
+              - generic [ref=e358]: Desintoxicación
+              - generic [ref=e361]: $ 45.550,00
+              - generic [ref=e362]: 20 puntos
+              - 'button "Añadir al carrito: “ALPHA BALANCE”" [ref=e364] [cursor=pointer]': Añadir al carrito
+      - heading "Ingredientes científicamante respaldados" [level=1] [ref=e371]
+      - generic [ref=e378]:
+        - generic [ref=e380]:
+          - heading "Cultivos probióticos" [level=4] [ref=e386] [cursor=pointer]
+          - generic [ref=e388]:
+            - paragraph [ref=e389]:
+              - strong [ref=e390]: "Origen:"
+            - paragraph [ref=e391]: Derivan de microorganismos beneficiosos presentes de forma natural en alimentos fermentados consumidos por distintas culturas desde la antigüedad.
+            - paragraph [ref=e392]:
+              - strong [ref=e393]: "Uso ancestral:"
+            - paragraph [ref=e394]: "Diversas civilizaciones consumían alimentos fermentados para:"
+            - list [ref=e395]:
+              - listitem [ref=e396]: Favorecer el equilibrio de la flora intestinal.
+              - listitem [ref=e397]: Mejorar la digestión.
+              - listitem [ref=e398]: Fortalecer el bienestar general del organismo.
+        - generic [ref=e400]:
+          - heading "Fibra prebiótica" [level=4] [ref=e406] [cursor=pointer]
+          - generic [ref=e408]:
+            - paragraph [ref=e409]:
+              - strong [ref=e410]: "Origen:"
+            - paragraph [ref=e411]: Proviene de fibras naturales presentes en plantas, raíces, semillas y frutas utilizadas desde tiempos ancestrales en la alimentación humana.
+            - paragraph [ref=e412]:
+              - strong [ref=e413]: "Uso ancestral:"
+            - paragraph [ref=e414]: "Las culturas antiguas consumían alimentos ricos en fibra para:"
+            - list [ref=e415]:
+              - listitem [ref=e416]: Favorecer el tránsito intestinal.
+              - listitem [ref=e417]: Mantener una digestión regular.
+              - listitem [ref=e418]: Contribuir al equilibrio del sistema digestivo.
+        - generic [ref=e420]:
+          - heading "Pulpa de granadilla" [level=4] [ref=e426] [cursor=pointer]
+          - generic [ref=e428]:
+            - paragraph [ref=e429]:
+              - strong [ref=e430]: "Origen:"
+            - paragraph [ref=e431]: Fruta tropical originaria de América del Sur, especialmente de la región andina.
+            - paragraph [ref=e432]:
+              - strong [ref=e433]: "Uso ancestral:"
+            - paragraph [ref=e434]: "Las culturas locales la utilizaban como alimento natural para:"
+            - list [ref=e435]:
+              - listitem [ref=e436]: Favorecer la digestión.
+              - listitem [ref=e437]: Aportar fibra y nutrientes al organismo.
+              - listitem [ref=e438]: Refrescar y fortalecer el cuerpo de forma natural.
+        - generic [ref=e440]:
+          - heading "Aguaymanto" [level=4] [ref=e446] [cursor=pointer]
+          - generic [ref=e448]:
+            - paragraph [ref=e449]:
+              - strong [ref=e450]: "Origen:"
+            - paragraph [ref=e451]: Fruta nativa de los Andes, especialmente de Perú, Ecuador y Colombia.
+            - paragraph [ref=e452]:
+              - strong [ref=e453]: "Uso ancestral:"
+            - paragraph [ref=e454]: "Las culturas andinas la utilizaban tradicionalmente para:"
+            - list [ref=e455]:
+              - listitem [ref=e456]: Fortalecer el organismo.
+              - listitem [ref=e457]: Aportar vitalidad y energía.
+              - listitem [ref=e458]: Aprovechar sus propiedades nutritivas y antioxidantes.
+            - paragraph [ref=e459]: "Las poblaciones indígenas la utilizaban para:"
+            - list [ref=e460]:
+              - listitem [ref=e461]: Fortalecer las defensas del organismo.
+              - listitem [ref=e462]: Prevenir la debilidad y la fatiga.
+              - listitem [ref=e463]: Proteger el cuerpo gracias a su poder antioxidante natural.
+        - generic [ref=e465]:
+          - heading "Curcumina" [level=4] [ref=e471] [cursor=pointer]
+          - generic [ref=e473]:
+            - paragraph [ref=e474]:
+              - strong [ref=e475]: "Origen:"
+            - paragraph [ref=e476]: Compuesto natural que se extrae de la cúrcuma, una raíz originaria del sur de Asia, especialmente de la India y el sudeste asiático.
+            - paragraph [ref=e477]:
+              - strong [ref=e478]: "Uso ancestral:"
+            - paragraph [ref=e479]: "Las civilizaciones de la India y Asia la utilizaban desde hace miles de años en la medicina tradicional y en la alimentación para:"
+            - list [ref=e480]:
+              - listitem [ref=e481]: Apoyar los procesos antiinflamatorios del cuerpo.
+              - listitem [ref=e482]: Favorecer la digestión y el bienestar digestivo.
+              - listitem [ref=e483]: Contribuir a la depuración y el equilibrio del organismo.
+              - listitem [ref=e484]: Promover el bienestar general y la vitalidad.
+      - heading "Todo tu cuerpo depende del equilibrio de tu flora intestinal. Hay hábitos que la alteran y otros que la regeneran. Con Flora Liv, vos decidís cuidarte desde adentro." [level=4] [ref=e489]
+      - generic [ref=e492]:
+        - generic [ref=e493]:
+          - heading "FUSIÓN NUTRACÉUTICA" [level=1] [ref=e496]
+          - heading "¿Cómo llega este sobre desde el Amazonas hasta tu casa?" [level=1] [ref=e499]
+        - generic [ref=e504]:
+          - generic [ref=e506]:
+            - img [ref=e509]
+            - generic [ref=e514]:
+              - heading "1. Recolección y traslado" [level=3] [ref=e516]
+              - paragraph [ref=e518]: Seleccionamos lo mejor de la naturaleza y lo trasladamos desde la Amazonía de Iquitos hasta la ciudad de Lima, preservando la frescura y calidad de cada insumo desde su origen.
+          - generic [ref=e521]:
+            - img [ref=e524]
+            - generic [ref=e529]:
+              - heading "2. Selección y lavado" [level=3] [ref=e531]
+              - paragraph [ref=e533]: Se separan cuidadosamente las partes del insumo que serán utilizadas (hojas, tallos, cáscara, semillas o frutos) y se lavan con agua purificada para garantizar su pureza.
+          - generic [ref=e536]:
+            - img [ref=e539]
+            - generic [ref=e544]:
+              - heading "3. Prensado en frío" [level=3] [ref=e546]
+              - paragraph [ref=e548]: Mediante prensado en frío se extraen los principios activos de cada planta, conservando sus propiedades nutricionales y funcionales para el bienestar del cuerpo.
+          - generic [ref=e551]:
+            - img [ref=e554]
+            - generic [ref=e563]:
+              - heading "4. Atomización" [level=3] [ref=e565]
+              - paragraph [ref=e567]: El extracto líquido se transforma en microgotas. Con calor controlado (74 °C) se evapora el agua y en segundos cada microgota se convierte en un polvo fino y estable.
+          - generic [ref=e570]:
+            - img [ref=e573]
+            - generic [ref=e581]:
+              - heading "5. EmulXion®" [level=3] [ref=e583]
+              - paragraph [ref=e585]: Cada partícula de polvo se encapsula en ácidos grasos esenciales, creando una matriz que protege los nutrientes y mejora su absorción dentro del organismo.
+          - generic [ref=e588]:
+            - img [ref=e591]
+            - generic [ref=e604]:
+              - heading "6. Envasado en sticks" [level=3] [ref=e606]
+              - paragraph [ref=e608]: El producto se dosifica y envasa en sticks mediante tecnología de alta precisión, asegurando higiene, frescura y la cantidad exacta en cada porción.
+          - generic [ref=e611]:
+            - img [ref=e614]
+            - generic [ref=e619]:
+              - heading "7. Encajado y a distribución" [level=3] [ref=e621]
+              - paragraph [ref=e623]: Los sticks terminados se empaquetan y preparan para su distribución oficial, iniciando el proceso logístico que los lleva desde planta hasta nuestros centros de distribución y, finalmente, a la puerta de tu casa a través de distribuidores oficiales autorizados.
+        - generic [ref=e627]:
+          - generic [ref=e628]:
+            - heading "DISTRIBUIDOR OFICIAL" [level=1] [ref=e631]
+            - heading "¿A quién le estás comprando?" [level=1] [ref=e634]
+          - generic [ref=e639]:
+            - heading "¡Hola! Somos Mica y Félix" [level=1] [ref=e642]
+            - generic [ref=e644]:
+              - paragraph [ref=e649]: "Este proyecto nació el 9 de Marzo de 2024, con mucho amor, dedicación y un propósito muy claro: Ayudar a más personas a vivir una vida mejor, con salud verdadera."
+              - generic [ref=e651]:
+                - paragraph [ref=e652]: Todo comenzó cuando yo (Mica) probé Prunex, gracias a Félix… y viví una transformación que literalmente me cambió la vida.
+                - paragraph [ref=e653]: "A partir de ahí, entendimos que cuando algo te transforma, no podés guardártelo — tenés que compartirlo. Así nació TiendaFX, una comunidad que busca un camino diferente:"
+                - paragraph [ref=e654]:
+                  - text: El de la salud real, la información correcta y el bienestar integral.
+                  - img "🌿" [ref=e655]
+                - paragraph [ref=e656]: Hoy, TiendaFX late gracias a cada historia compartida, a cada persona que elige cuidarse y creer en este estilo de vida.
+                - paragraph [ref=e657]: "Para nosotros, la salud no se trata solo de lo que comemos, sino también de cómo pensamos, sentimos y vivimos. Y sin ninguna duda, los productos de Fuxion fueron el punto de partida para este cambio:"
+                - paragraph [ref=e658]:
+                  - img "✨" [ref=e659]
+                  - text: Un camino hacia una vida más natural, consciente y plena.
+                - paragraph [ref=e660]:
+                  - img "💛" [ref=e661]
+                  - text: Una historia real, que hoy se multiplica con cada persona que elige transformarse.
+      - heading "Preguntas Frecuentes" [level=2] [ref=e666]
+      - generic [ref=e671]:
+        - generic [ref=e675]:
+          - tablist [ref=e676]:
+            - tab "¿Para qué sirve el Flora Liv?" [ref=e677] [cursor=pointer]:
+              - img [ref=e680]
+              - heading "¿Para qué sirve el Flora Liv?" [level=4] [ref=e682]
+          - tablist [ref=e683]:
+            - tab "¿Qué son los probióticos y por qué son importantes?" [ref=e684] [cursor=pointer]:
+              - img [ref=e687]
+              - heading "¿Qué son los probióticos y por qué son importantes?" [level=4] [ref=e689]
+          - tablist [ref=e690]:
+            - tab "¿Qué síntomas o molestias puede ayudar a aliviar?" [ref=e691] [cursor=pointer]:
+              - img [ref=e694]
+              - heading "¿Qué síntomas o molestias puede ayudar a aliviar?" [level=4] [ref=e696]
+          - tablist [ref=e697]:
+            - tab "¿Se puede tomar todos los días?" [ref=e698] [cursor=pointer]:
+              - img [ref=e701]
+              - heading "¿Se puede tomar todos los días?" [level=4] [ref=e703]
+        - generic [ref=e707]:
+          - tablist [ref=e708]:
+            - tab "¿Se lo puedo dar a niños?" [ref=e709] [cursor=pointer]:
+              - img [ref=e712]
+              - heading "¿Se lo puedo dar a niños?" [level=4] [ref=e714]
+          - tablist [ref=e715]:
+            - tab "¿Cómo funciona la garantía?" [ref=e716] [cursor=pointer]:
+              - img [ref=e719]
+              - heading "¿Cómo funciona la garantía?" [level=4] [ref=e721]
+          - tablist [ref=e722]:
+            - tab "¿Cómo funciona la caja de regalo por continuidad?" [ref=e723] [cursor=pointer]:
+              - img [ref=e726]
+              - heading "¿Cómo funciona la caja de regalo por continuidad?" [level=4] [ref=e728]
+          - tablist [ref=e729]:
+            - tab "¿Qué pasa si compré por Mercado Libre u otro canal no oficial?" [ref=e730] [cursor=pointer]:
+              - img [ref=e733]
+              - heading "¿Qué pasa si compré por Mercado Libre u otro canal no oficial?" [level=4] [ref=e735]
+    - generic [ref=e738]:
+      - generic [ref=e739]:
+        - generic [ref=e741]:
+          - heading "SEGUINOS!" [level=2] [ref=e744]
+          - generic [ref=e747]:
+            - link "Instagram" [ref=e749] [cursor=pointer]:
+              - /url: https://www.instagram.com
+              - img [ref=e750]
+            - heading "Instagram" [level=3] [ref=e753]:
+              - link "Instagram" [ref=e754] [cursor=pointer]:
+                - /url: https://www.instagram.com
+          - generic [ref=e757]:
+            - link "TikTok" [ref=e759] [cursor=pointer]:
+              - /url: https://www.tiktok.com
+              - img [ref=e760]
+            - heading "TikTok" [level=3] [ref=e763]:
+              - link "TikTok" [ref=e764] [cursor=pointer]:
+                - /url: https://www.tiktok.com
+          - generic [ref=e767]:
+            - link "Facebook" [ref=e769] [cursor=pointer]:
+              - /url: https://www.facebook.com
+              - img [ref=e770]
+            - heading "Facebook" [level=3] [ref=e773]:
+              - link "Facebook" [ref=e774] [cursor=pointer]:
+                - /url: https://www.facebook.com
+        - generic [ref=e776]:
+          - heading "AYUDA" [level=2] [ref=e779]
+          - navigation "Menu" [ref=e782]:
+            - list [ref=e783]:
+              - listitem [ref=e784]:
+                - link "Contacto" [ref=e785] [cursor=pointer]:
+                  - /url: https://testargentinaa.sites.fuxion.com/contact/
+              - listitem [ref=e786]:
+                - link "Garantías y Devoluciones" [ref=e787] [cursor=pointer]:
+                  - /url: https://testargentinaa.sites.fuxion.com/garantias-y-devoluciones/
+              - listitem [ref=e788]:
+                - link "Términos y Condiciones" [ref=e789] [cursor=pointer]:
+                  - /url: https://testargentinaa.sites.fuxion.com/terminos-y-condiciones/
+        - generic [ref=e790]:
+          - heading "NEWSLETTER" [level=2] [ref=e794]
+          - generic [ref=e795]:
+            - paragraph [ref=e798]: Enterate de todas las novedades.
+            - form "Newsletter" [ref=e801]:
+              - generic [ref=e802]:
+                - textbox "Correo electrónico" [ref=e804]
+                - button "Enviar" [ref=e806] [cursor=pointer]:
+                  - generic [ref=e808]: Enviar
+      - generic [ref=e809]:
+        - generic [ref=e813]:
+          - img [ref=e816]
+          - heading "Con amor, desde Buenos Aires" [level=3] [ref=e819]
+        - heading "® 2026 Distribuidor Oficial Fuxion" [level=3] [ref=e825]
+  - generic [ref=e826]: desktop
+  - status [ref=e827]
+```
+
+# Test source
+
+```ts
+  1  | import { Page, Locator } from '@playwright/test';
+  2  | 
+  3  | export class HomePage {
+  4  |   readonly page: Page;
+  5  |   readonly addToCartButton: Locator;
+  6  | 
+  7  |   constructor(page: Page) {
+  8  |     this.page = page;
+  9  |     this.addToCartButton = page.locator('button[name="add-to-cart"]').first();
+  10 |   }
+  11 | 
+  12 |   async goto() {
+  13 |     // Vamos a la tienda principal del país actual
+  14 |     await this.page.goto('/tienda/'); 
+  15 |     await this.page.waitForTimeout(3000); // Esperar carga de productos
+  16 | 
+  17 |     // Buscamos dinámicamente cualquier enlace que lleve a un producto
+  18 |     const productLinks = this.page.locator('a[href*="/producto/"]');
+  19 |     const count = await productLinks.count();
+  20 |     if (count === 0) throw new Error('No se encontraron productos en la tienda');
+  21 | 
+  22 |     // Navegamos al detalle del producto encontrado haciendo click (más seguro que goto)
+  23 |     await productLinks.first().click();
+  24 |   }
+  25 | 
+  26 |   async addProductToCart() {
+> 27 |     await this.addToCartButton.waitFor({ state: 'visible' });
+     |                                ^ Error: locator.waitFor: Test timeout of 90000ms exceeded.
+  28 |     await this.addToCartButton.click();
+  29 |     await this.page.waitForTimeout(2000); // Wait for cart animation/update
+  30 |   }
+  31 | }
+  32 | 
+  33 | 
+```
