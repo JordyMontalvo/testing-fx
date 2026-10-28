@@ -1,5 +1,8 @@
 name: Fuxion E2E Tests
 
+permissions:
+  contents: write
+
 on:
   push:
     branches: [ master, main ]

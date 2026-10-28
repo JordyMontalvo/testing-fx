@@ -6,7 +6,7 @@ import { CheckoutPage } from '../pages/CheckoutPage';
 const countryEmails: Record<string, string> = {
   'Mexico': 'fx_plugin_test_mx@yopmail.com',
   'USA': 'fx_plugin_test_usa@yopmail.com',
-  'Spain': 'fx_plugin_test_esp1@yopmail.com',
+  'Espana': 'fx_plugin_test_esp1@yopmail.com',
   'Ecuador': 'fx_plugin_test_ec@yopmail.com',
   'Chile': 'fx_plugin_test_cl@yopmail.com',
   'Argentina': 'fx_plugin_test_ar@yopmail.com'
